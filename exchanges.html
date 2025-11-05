@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Exchanges - SkillShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">SkillShare</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="my-skills.html">My Skills</a></li>
+                    <li><a href="exchanges.html" class="active">Exchanges</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                </ul>
+                <div class="user-info">
+                    <div class="user-avatar">L</div>
+                    <span>Test</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h1>My Exchanges</h1>
+            <p>Track all your learning sessions and teachings</p>
+            
+            <!-- Exchange Tabs -->
+            <div class="tabs">
+                <div class="tab active" data-tab="active">Active (0)</div>
+                <div class="tab" data-tab="completed">Completed (0)</div>
+                <div class="tab" data-tab="upcoming">Upcoming (0)</div>
+            </div>
+            
+            <!-- Active Exchanges Tab -->
+            <div class="tab-content active" id="active-tab">
+                <div class="empty-state">
+                    <p>No active exchanges yet</p>
+                    <p>Book a skill to start learning or wait for someone to book your skills.</p>
+                    <a href="discover.html" class="btn btn-primary">Discover Skills</a>
+                </div>
+            </div>
+            
+            <!-- Completed Exchanges Tab -->
+            <div class="tab-content" id="completed-tab">
+                <div class="empty-state">
+                    <p>No completed exchanges yet</p>
+                    <p>Your completed skill exchanges will appear here.</p>
+                </div>
+                
+                <!-- Example of a completed exchange (commented out for now) -->
+                <!--
+                <div class="exchange-card completed">
+                    <div class="exchange-header">
+                        <h3>Web Development Basics</h3>
+                        <span class="exchange-status completed">Completed</span>
+                    </div>
+                    <div class="exchange-details">
+                        <p><strong>Teacher:</strong> Code Master</p>
+                        <p><strong>Date:</strong> October 15, 2023</p>
+                        <p><strong>Duration:</strong> 2 hours</p>
+                    </div>
+                    <div class="exchange-actions">
+                        <button class="btn btn-secondary">Leave Review</button>
+                        <button class="btn btn-secondary">View Details</button>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+            <!-- Upcoming Exchanges Tab -->
+            <div class="tab-content" id="upcoming-tab">
+                <div class="empty-state">
+                    <p>No upcoming exchanges yet</p>
+                    <p>Your scheduled skill exchanges will appear here.</p>
+                </div>
+            </div>
+            
+            <!-- Notable Exchanges Section -->
+            <div class="notable-exchanges">
+                <h2>Notable Exchanges</h2>
+                <p>Book a visit to start learning or wait for someone to book your skills.</p>
+                
+                <div class="exchange-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Total Exchanges</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Skills Learned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Skills Taught</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exchange Management -->
+            <div class="exchange-management">
+                <h2>Exchange Management</h2>
+                <div class="management-options">
+                    <div class="option-card">
+                        <h3>Learn More, Create</h3>
+                        <ul class="option-list">
+                            <li><a href="discover.html">Discover Skills</a></li>
+                            <li><a href="#">Home Skills</a></li>
+                            <li><a href="my-skills.html">My Skills</a></li>
+                            <li><a href="exchanges.html" class="active">My Exchanges</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                        </ul>
+                    </div>
+                    <div class="option-card">
+                        <h3>Your Stats</h3>
+                        <ul class="option-list">
+                            <li><a href="#">Perks</a></li>
+                            <li><a href="#">Reputation</a></li>
+                            <li><a href="#">Success Rate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SkillShare</h3>
+                    <p>Connect, learn and share skills with our amazing community.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="discover.html">Discover Skills</a></li>
+                        <li><a href="my-skills.html">My Skills</a></li>
+                        <li><a href="messages.html">Messages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkillShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show selected tab content
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - SkillShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">SkillShare</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="my-skills.html">My Skills</a></li>
+                    <li><a href="exchanges.html">Exchanges</a></li>
+                    <li><a href="messages.html" class="active">Messages</a></li>
+                </ul>
+                <div class="user-info">
+                    <div class="user-avatar">L</div>
+                    <span>Test</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="messages-layout">
+            <!-- Sidebar -->
+            <div class="messages-sidebar">
+                <div class="sidebar-section">
+                    <h3>Menu</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="discover.html">Discover Skills</a></li>
+                        <li><a href="my-skills.html">My Skills</a></li>
+                        <li><a href="exchanges.html">My Exchanges</a></li>
+                        <li><a href="messages.html" class="active">Messages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Your Stats</h3>
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Perks</a></li>
+                        <li><a href="#">Reputation</a></li>
+                        <li><a href="#">Success Rate</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Messages Content -->
+            <div class="messages-content">
+                <section class="section">
+                    <h1>Messages</h1>
+                    <p>Chat with your learning partners</p>
+                    
+                    <div class="empty-state">
+                        <p>No conversations yet</p>
+                        <p>Start an exchange to start chatting with other members</p>
+                        <a href="discover.html" class="btn btn-primary">Discover Skills</a>
+                    </div>
+                    
+                    <!-- Example conversation (commented out for now) -->
+                    <!--
+                    <div class="conversation-list">
+                        <div class="conversation active">
+                            <div class="conversation-avatar">CM</div>
+                            <div class="conversation-details">
+                                <div class="conversation-header">
+                                    <h3>Code Master</h3>
+                                    <span class="conversation-time">2 hours ago</span>
+                                </div>
+                                <p class="conversation-preview">Hi! I'd like to schedule our web development session...</p>
+                            </div>
+                        </div>
+                        <div class="conversation">
+                            <div class="conversation-avatar">LS</div>
+                            <div class="conversation-details">
+                                <div class="conversation-header">
+                                    <h3>Language Pro</h3>
+                                    <span class="conversation-time">1 day ago</span>
+                                </div>
+                                <p class="conversation-preview">Hola! Are you ready for our Spanish practice session?</p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </section>
+                
+                <!-- Chat area (hidden when no conversation selected) -->
+                <div class="chat-area" style="display: none;">
+                    <div class="chat-header">
+                        <div class="chat-partner">
+                            <div class="partner-avatar">CM</div>
+                            <div class="partner-info">
+                                <h3>Code Master</h3>
+                                <span class="partner-status">Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="btn btn-secondary">View Profile</button>
+                            <button class="btn btn-secondary">Schedule Session</button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages">
+                        <div class="message received">
+                            <div class="message-content">
+                                <p>Hi! I'd like to schedule our web development session. When are you available?</p>
+                                <span class="message-time">10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>Hi Code Master! I'm available on Tuesday or Thursday afternoon. What works for you?</p>
+                                <span class="message-time">10:32 AM</span>
+                            </div>
+                        </div>
+                        <div class="message received">
+                            <div class="message-content">
+                                <p>Thursday at 2 PM works perfectly for me. Does that work for you?</p>
+                                <span class="message-time">10:33 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <textarea placeholder="Type your message..."></textarea>
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SkillShare</h3>
+                    <p>Connect, learn and share skills with our amazing community.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="discover.html">Discover Skills</a></li>
+                        <li><a href="my-skills.html">My Skills</a></li>
+                        <li><a href="messages.html">Messages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkillShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
